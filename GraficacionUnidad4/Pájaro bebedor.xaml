@@ -1,0 +1,54 @@
+﻿<Window x:Class="GraficacionUnidad4.AnimacionGrados"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GraficacionUnidad4"
+        mc:Ignorable="d"
+        Title="AnimacionGrados" Height="950" Width="1200">
+    <Canvas>
+        <Ellipse Canvas.Left="580" Canvas.Top="475" Width="120" Height="300" StrokeThickness="1" Stroke="Black" Fill="Red"></Ellipse>
+        <Path Canvas.Left="610" Canvas.Top="745" Fill="Yellow" Stroke="Black" StrokeThickness="1" Data="m0,0 60,0 l0,150 -120,0 0,0 q20,-50 60,-40z"></Path>
+        <Canvas Canvas.Left="510" Canvas.Top="390" Height="300" Width="260">
+            <Canvas.RenderTransform>
+                <RotateTransform x:Name="rotacion" CenterX="130" CenterY="150" Angle="0"></RotateTransform>
+            </Canvas.RenderTransform>
+            <Canvas.Triggers>
+                <EventTrigger RoutedEvent="MouseLeftButtonDown">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+                                Storyboard.TargetName="rotacion"
+                                Storyboard.TargetProperty="Angle"
+                                From="0" To="-20" Duration="0:0:2"
+                                AutoReverse="True" RepeatBehavior="Forever">
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Canvas.Triggers>
+            <Path Stroke="Black" StrokeThickness="1" Fill="White" Data="m0,0 240,200 0,0 q150,0 120,130 q-120,40 -150,-100 0,0 -240,-200z"></Path>
+            <Path Stroke="Black" StrokeThickness="1" Fill="Red" Data="m0,0 60,50 -30,30 -60,-50z"></Path>
+            <Path Canvas.Left="-120" Canvas.Top="30" Stroke="Black" StrokeThickness="1" Fill="Red" Data="m0,0 0,0 a90,90 0 1 0 -5,-50 l-60,30z">
+                <Path.RenderTransform>
+                    <RotateTransform CenterX="0.5" CenterY="0.5" Angle="-30"></RotateTransform>
+                </Path.RenderTransform>
+            </Path>
+            <Canvas Canvas.Left="-165" Canvas.Top="-55">
+                <Canvas.RenderTransform>
+                    <RotateTransform CenterX="0.5" CenterY="0.5" Angle="-35"></RotateTransform>
+                </Canvas.RenderTransform>
+                <Rectangle Canvas.Left="10" Canvas.Top="-80" Width="130" Height="80" Stroke="Black" Fill="Blue" StrokeThickness="1"></Rectangle>
+                <Rectangle Height="10" Width="150" Stroke="Black" StrokeThickness="1" Fill="Blue"></Rectangle>
+            </Canvas>
+            <Canvas Canvas.Left="-120" Canvas.Top="-50">
+                <Ellipse Width="35" Height="35" Fill="White" Stroke="Black" StrokeThickness="2"></Ellipse>
+                <Ellipse Canvas.Left="8" Canvas.Top="15" Width="13" Height="13" Fill="Black" Stroke="Black" StrokeThickness="2"></Ellipse>
+            </Canvas>
+            <!--0,0 -1,3 0,0 -2,2 0,0 -2,2 q-70,20 -80,-40 0,0-->
+        </Canvas>
+        <Ellipse Canvas.Left="570" Canvas.Top="480" Width="120" Height="300" StrokeThickness="1" Stroke="Black" Fill="Red"></Ellipse>
+        <Path Canvas.Left="600" Canvas.Top="750" Fill="Yellow" Stroke="Black" StrokeThickness="1" Data="m0,0 60,0 l0,150 -120,0 0,0 q20,-50 60,-40z"></Path>
+        
+    </Canvas>
+</Window>

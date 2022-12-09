@@ -1,0 +1,242 @@
+﻿<Window x:Class="GraficacionUnidad4.DibujoLibreAnimación"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GraficacionUnidad4"
+        mc:Ignorable="d"
+          Title="MainWindow" Height="320" Width="220" Background="Black">
+    <Canvas>
+        <Canvas>
+            <Canvas.RenderTransform>
+                <RotateTransform CenterX="0.5" CenterY="0.5" Angle="30"></RotateTransform>
+            </Canvas.RenderTransform>
+            <Path Canvas.Left="60" Canvas.Top="64" StrokeThickness="3" Data="m0,0 q30,-39 90,0 q-60,38 -90,0z">
+                <Path.Effect>
+                    <DropShadowEffect ShadowDepth="0" Color="Transparent"
+                                      Opacity="1" BlurRadius="15" x:Name="dibujoizquierdaglow"/>
+                </Path.Effect>
+                <Path.Triggers>
+                    <EventTrigger RoutedEvent="Canvas.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation
+                                    Storyboard.TargetName="dibujoizquierda"
+                                    Storyboard.TargetProperty="Color"
+                                    From="#FFEEFF" To="#FFB9FF" Duration="0:0:0.4"
+                                    RepeatBehavior="Forever" AutoReverse="True"/>
+                                <ColorAnimation
+                                    Storyboard.TargetName="dibujoizquierdaglow"
+                                    Storyboard.TargetProperty="Color"
+                                    From="Transparent" To="#FFB9FF" Duration="0:0:0.4"
+                                    RepeatBehavior="Forever" AutoReverse="True"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Path.Triggers>
+                <Path.Stroke>
+                    <SolidColorBrush x:Name="dibujoizquierda" Color="#FFEEFF"></SolidColorBrush>
+                </Path.Stroke>
+                <Path.Fill>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0.4">
+                        <GradientStop Color="#8853C1" Offset="0.5"></GradientStop>
+                        <GradientStop Color="#C375FF" Offset="0.6"></GradientStop>
+                        <GradientStop Color="#FFB5FF" Offset="0.8"></GradientStop>
+                    </LinearGradientBrush>
+                </Path.Fill>
+            </Path>
+            <Ellipse Width="30" Height="30" StrokeThickness="2" Stroke="#7B3FBF" Fill="#D592FF" Canvas.Left="75" Canvas.Top="48.5"></Ellipse>
+        </Canvas>
+        <Canvas Canvas.Left="277.5" Canvas.Top="110">
+            <Canvas.RenderTransform>
+                <RotateTransform CenterX="0.5" CenterY="0.5" Angle="150"></RotateTransform>
+            </Canvas.RenderTransform>
+            <Path Canvas.Left="60" Canvas.Top="64" StrokeThickness="3" Data="m0,0 q30,-39 90,0 q-60,38 -90,0z">
+                <Path.Effect>
+                    <DropShadowEffect ShadowDepth="0" Color="Transparent"
+                                      Opacity="1" BlurRadius="15" x:Name="dibujoderechaglow"/>
+                </Path.Effect>
+                <Path.Triggers>
+                    <EventTrigger RoutedEvent="Canvas.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation
+                                    Storyboard.TargetName="dibujoderecha"
+                                    Storyboard.TargetProperty="Color"
+                                    From="#FFEEFF" To="#FFB9FF" Duration="0:0:0.4"
+                                    RepeatBehavior="Forever" AutoReverse="True"/>
+                                <ColorAnimation
+                                    Storyboard.TargetName="dibujoderechaglow"
+                                    Storyboard.TargetProperty="Color"
+                                    From="Transparent" To="#FFB9FF" Duration="0:0:0.4"
+                                    RepeatBehavior="Forever" AutoReverse="True"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Path.Triggers>
+                <Path.Stroke>
+                    <SolidColorBrush x:Name="dibujoderecha" Color="#FFEEFF"></SolidColorBrush>
+                </Path.Stroke>
+                <Path.Fill>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0.4">
+                        <GradientStop Color="#8853C1" Offset="0.5"></GradientStop>
+                        <GradientStop Color="#C375FF" Offset="0.6"></GradientStop>
+                        <GradientStop Color="#FFB5FF" Offset="0.8"></GradientStop>
+                    </LinearGradientBrush>
+                </Path.Fill>
+            </Path>
+            <Ellipse Width="30" Height="30" StrokeThickness="2" Stroke="#7B3FBF" Fill="#D592FF" Canvas.Left="75" Canvas.Top="48.5"></Ellipse>
+        </Canvas>
+        <Canvas Canvas.Left="44" Canvas.Top="300">
+            <Canvas.RenderTransform>
+                <RotateTransform CenterX="0.5" CenterY="0.5" Angle="269.8"></RotateTransform>
+            </Canvas.RenderTransform>
+            <Path Canvas.Left="70" Canvas.Top="64" StrokeThickness="3" Data="m0,0 q30,-39 90,0 q-60,38 -90,0z">
+                <Path.Effect>
+                    <DropShadowEffect ShadowDepth="0" Color="Transparent"
+                                      Opacity="1" BlurRadius="15" x:Name="dibujoabajoglow"/>
+                </Path.Effect>
+                <Path.Triggers>
+                    <EventTrigger RoutedEvent="Canvas.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation
+                                    Storyboard.TargetName="dibujoabajo"
+                                    Storyboard.TargetProperty="Color"
+                                    From="#FFEEFF" To="#FFB9FF" Duration="0:0:0.4"
+                                    RepeatBehavior="Forever" AutoReverse="True"/>
+                                <ColorAnimation
+                                    Storyboard.TargetName="dibujoabajoglow"
+                                    Storyboard.TargetProperty="Color"
+                                    From="Transparent" To="#FFB9FF" Duration="0:0:0.4"
+                                    RepeatBehavior="Forever" AutoReverse="True"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Path.Triggers>
+                <Path.Stroke>
+                    <SolidColorBrush x:Name="dibujoabajo" Color="#FFEEFF"></SolidColorBrush>
+                </Path.Stroke>
+                <Path.Fill>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0.4">
+                        <GradientStop Color="#8853C1" Offset="0.5"></GradientStop>
+                        <GradientStop Color="#C375FF" Offset="0.6"></GradientStop>
+                        <GradientStop Color="#FFB5FF" Offset="0.8"></GradientStop>
+                    </LinearGradientBrush>
+                </Path.Fill>
+            </Path>
+            <Ellipse Width="30" Height="30" StrokeThickness="2" Stroke="#7B3FBF" Fill="#D592FF" Canvas.Left="85" Canvas.Top="48.5"></Ellipse>
+        </Canvas>
+        <Path StrokeThickness="2" Canvas.Top="85" Canvas.Left="74.5" Data="m0,0 q32.5,-10 65,0 q-40,5 -22,25 l-10,15 l-10,-15 q15,-20 -22,-25z">
+            <Path.Effect>
+                <DropShadowEffect ShadowDepth="0" Color="Transparent"
+                                      Opacity="1" BlurRadius="15" x:Name="dibujoarribaglow"/>
+            </Path.Effect>
+            <Path.Stroke>
+                <SolidColorBrush x:Name="formaarriba" Color="#BB7CF2"></SolidColorBrush>
+            </Path.Stroke>
+            <Path.Fill>
+                <SolidColorBrush x:Name="formaarribafill" Color="#BB7CF2"></SolidColorBrush>
+            </Path.Fill>
+            <Path.Triggers>
+                <EventTrigger RoutedEvent="Canvas.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation
+                                    Storyboard.TargetName="formaarriba"
+                                    Storyboard.TargetProperty="Color"
+                                    From="#BB7CF2" To="#C59DE7" Duration="0:0:0.4"
+                                    RepeatBehavior="Forever" AutoReverse="True"/>
+                            <ColorAnimation
+                                    Storyboard.TargetName="formaarribafill"
+                                    Storyboard.TargetProperty="Color"
+                                    From="#BB7CF2" To="#C59DE7" Duration="0:0:0.4"
+                                    RepeatBehavior="Forever" AutoReverse="True"/>
+                            <ColorAnimation
+                                    Storyboard.TargetName="dibujoarribaglow"
+                                    Storyboard.TargetProperty="Color"
+                                    From="Transparent" To="#FFB9FF" Duration="0:0:0.4"
+                                    RepeatBehavior="Forever" AutoReverse="True"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Path.Triggers>
+        </Path>
+        <Path StrokeThickness="2" Canvas.Top="133" Canvas.Left="169.5" Data="m0,0 q32.5,-10 65,0 q-40,5 -22,25 l-10,15 l-10,-15 q15,-20 -22,-25z">
+            <Path.Effect>
+                <DropShadowEffect ShadowDepth="0" Color="Transparent"
+                                      Opacity="1" BlurRadius="15" x:Name="dibujoderechaglow2"/>
+            </Path.Effect>
+            <Path.RenderTransform>
+                <RotateTransform CenterX="0.5" CenterY="0.5" Angle="120"></RotateTransform>
+            </Path.RenderTransform>
+            <Path.Stroke>
+                <SolidColorBrush x:Name="formaderecha" Color="#BB7CF2"></SolidColorBrush>
+            </Path.Stroke>
+            <Path.Fill>
+                <SolidColorBrush x:Name="formaderechafill" Color="#BB7CF2"></SolidColorBrush>
+            </Path.Fill>
+            <Path.Triggers>
+                <EventTrigger RoutedEvent="Canvas.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation
+                                    Storyboard.TargetName="formaderecha"
+                                    Storyboard.TargetProperty="Color"
+                                    From="#BB7CF2" To="#C59DE7" Duration="0:0:0.4"
+                                    RepeatBehavior="Forever" AutoReverse="True"/>
+                            <ColorAnimation
+                                    Storyboard.TargetName="formaderechafill"
+                                    Storyboard.TargetProperty="Color"
+                                    From="#BB7CF2" To="#C59DE7" Duration="0:0:0.4"
+                                    RepeatBehavior="Forever" AutoReverse="True"/>
+                            <ColorAnimation
+                                    Storyboard.TargetName="dibujoderechaglow2"
+                                    Storyboard.TargetProperty="Color"
+                                    From="Transparent" To="#FFB9FF" Duration="0:0:0.4"
+                                    RepeatBehavior="Forever" AutoReverse="True"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Path.Triggers>
+        </Path>
+        <Path StrokeThickness="2" Canvas.Top="189" Canvas.Left="76.5" Data="m0,0 q32.5,-10 65,0 q-40,5 -22,25 l-10,15 l-10,-15 q15,-20 -22,-25z">
+            <Path.Effect>
+                <DropShadowEffect ShadowDepth="0" Color="Transparent"
+                                      Opacity="1" BlurRadius="15" x:Name="dibujoizquierdaglow2"/>
+            </Path.Effect>
+            <Path.RenderTransform>
+                <RotateTransform CenterX="0.5" CenterY="0.5" Angle="240"></RotateTransform>
+            </Path.RenderTransform>
+            <Path.Stroke>
+                <SolidColorBrush x:Name="formaizquierda" Color="#BB7CF2"></SolidColorBrush>
+            </Path.Stroke>
+            <Path.Fill>
+                <SolidColorBrush x:Name="formaizquierdafill" Color="#BB7CF2"></SolidColorBrush>
+            </Path.Fill>
+            <Path.Triggers>
+                <EventTrigger RoutedEvent="Canvas.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation
+                                    Storyboard.TargetName="formaizquierda"
+                                    Storyboard.TargetProperty="Color"
+                                    From="#BB7CF2" To="#C59DE7" Duration="0:0:0.4"
+                                    RepeatBehavior="Forever" AutoReverse="True"/>
+                            <ColorAnimation
+                                    Storyboard.TargetName="formaizquierdafill"
+                                    Storyboard.TargetProperty="Color"
+                                    From="#BB7CF2" To="#C59DE7" Duration="0:0:0.4"
+                                    RepeatBehavior="Forever" AutoReverse="True"/>
+                            <ColorAnimation
+                                    Storyboard.TargetName="dibujoizquierdaglow2"
+                                    Storyboard.TargetProperty="Color"
+                                    From="Transparent" To="#FFB9FF" Duration="0:0:0.4"
+                                    RepeatBehavior="Forever" AutoReverse="True"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Path.Triggers>
+        </Path>
+    </Canvas>
+</Window>
